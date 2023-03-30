@@ -1,0 +1,78 @@
+body{
+    background-color: #AAC4FF;
+}
+
+.profile-photo{
+    max-width: 25%;
+    display: block;
+    margin: 0 auto;
+}
+.profile{
+    text-align: center;
+    
+}
+hr{
+    border: dotted #7286D3 6px;
+    border-bottom: none;
+    width: 15%;
+    margin: 50px auto;
+}
+h1{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.about-me{
+    text-align: center;
+}
+.education{
+    width: 12%;
+    margin: 0 auto;
+    
+}
+.language-skills{
+    width: 20%;
+    margin: 0 auto;
+    
+}
+h2{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.bg-color-css{
+    background-color: #B1B2FF;
+}
+.logo-skills{
+    display: block;
+    margin: 0 auto;
+    height: 8%;
+    width: 8%;
+}
+.logo{
+    max-width: 8%;      
+}
+.logo-mysql{
+    max-width: 12%;
+}
+
+.container-fluid{
+    padding: 3% 20% 3%;
+    margin-left: 3%;
+}
+
+.volleyball{
+    margin-top: 2%;
+    
+}
+.mvp{
+    padding: 3% 15% 3%;
+}
+.mvp-photo{
+    display: flexbox;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+   
+}
+
+
