@@ -1,115 +1,358 @@
-body{
-    background-color: #AAC4FF;
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.profile-photo{
-    max-width: 25%;
-    display: block;
-    margin: 0 auto;
-}
-.profile{
-    text-align: center;
-    margin-top:50px;
-}
-hr{
-    border: dotted #7286D3 6px;
-    border-bottom: none;
-    width: 15%;
-    margin: 50px auto;
-}
-h1{
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.about-me{
-    text-align: center;
-}
-.education{
-    width: 12%;
-    margin: 0 auto;
-    
-}
-.language-skills{
-    width: 20%;
-    margin: 0 auto;
-    
-}
-h2{
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.bg-color-css{
-    background-color: #B1B2FF;
-}
-.logo-skills{
-    display: block;
-    margin: 0 auto;
-    height: 8%;
-    width: 8%;
-}
-.logo{
-    max-width: 8%;      
-}
-.logo-mysql{
-    max-width: 12%;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eef2ff;
+  color: #2a2a2a;
+  line-height: 1.6;
 }
 
-.container-fluid{
-    padding: 3% 7% 3%;
+h1, h2, h3 {
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-.volleyball{
-    margin-top: 2%;
-
+.section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
 }
 
-.volleyball  img {
-    width: 100%;
+hr {
+  width: 120px;
+  border: none;
+  border-top: 4px dotted #7286d3;
+  margin: 40px auto;
 }
 
-.mvp{
-    padding: 3% 15% 3%;
-}
-.mvp-photo{
-    display: flexbox;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-   
-}
-
+/* NAVBAR */
 .navbar {
-    position: fixed;
-    width: 100%;
+  background: #b1b2ff;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
 }
 
-.hobby > a {
-    padding: 10px;
-    
-    font-size: 18px;
-    text-decoration: none;
+.navbar .container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-
-@media only screen and (min-width: 768px) {
-    .navbar-brand {
-      margin-left: 25px;
-    }
+.nav-brand {
+  font-size: 22px;
+  font-weight: bold;
 }
 
-@media only screen and (max-width: 768px) {
-    .nav-link, .navbar-brand {
-      padding-left: 25px;
-    }
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
-@media only screen and (max-width: 425px) {
-    .profile {
-      margin-top: 60px;
-    }
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
 
-    .java-junior-header {
-        font-size: 22px;
-    }
+.nav-links a:hover {
+  color: #4a4aff;
+}
+
+/* HERO */
+.hero {
+  padding-top: 120px;
+  text-align: center;
+}
+
+.profile-photo {
+  width: 180px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.skill-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.skill-card img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+/* PROJECTS */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.project-card a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #4a4aff;
+}
+
+/* JOBS */
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.job-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* EDUCATION */
+#education p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* LANGUAGES */
+.language-list {
+  list-style: none;
+  text-align: center;
+}
+
+.language-list li {
+  margin: 5px 0;
+}
+
+/* HOBBIES */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.hobby-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.hobby-card:hover {
+  background: #dcdcff;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #4a4aff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.contact-btn:hover {
+  background: #2a2adf;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 30px;
+  background: #b1b2ff;
+  margin-top: 40px;
+}
+
+.footer a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* VOLLEYBALL PAGE */
+.volleyball-hero {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.volleyball-hero img {
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.volleyball-info {
+  max-width: 600px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.gallery-grid img,
+.gallery-grid video {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* TENNIS PAGE */
+.tennis-hero {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tennis-hero img {
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tennis-info {
+  max-width: 600px;
+  text-align: center;
+}
+
+.tennis-info p {
+  margin-bottom: 8px;
+}
+
+/* SINGING PAGE */
+.singing-hero {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.singing-hero img {
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+.singing-info {
+  max-width: 600px;
+  text-align: center;
+}
+
+.singing-info p {
+  margin-bottom: 10px;
+}
+
+/* GYM PAGE */
+.gym-content {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+}
+
+.gym-content p {
+  margin-bottom: 10px;
+}
+
+.gym-emoji {
+  margin-top: 20px;
+}
+
+/* MVP PAGE */
+.mvp-photo {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+}
+
+.mvp-photo img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.mvp-text {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.mvp-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mvp-links a {
+  text-decoration: none;
+  color: #4a4aff;
+  font-weight: bold;
+}
+
+.mvp-links a:hover {
+  color: #2a2adf;
+}
+
+/* FIX FOOTER ONLY ON SUBPAGES */
+body.subpage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body.subpage footer.footer {
+  margin-top: auto;
 }
